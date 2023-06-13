@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+    <title>I am parent</title>
+    {% endblock %}
+
+
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/c1.css' %}">
+
+</head>
+<body>
+    
+  
+    <button type="button" class="btn btn-primary">Primary</button>
+ 
+    
+    <div class="card" style="width: 18rem;">
+        <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp" class="card-img-top" alt="Sunset Over the Sea"/>
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+    </div>
+    
+    
+    
+
+    <div class="card">
+        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+          <img src="{% static 'images/moon.jpg' %}" class="img-fluid"/>
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#!" class="btn btn-primary">Button</a>
+        </div>
+      </div>
+
+      
+      {% block body_block %}
+      {% endblock %}
+    
+
+    <script src="{% static 'js/mdb.min.js' %}"></script>
+</body>
+</html>
